@@ -1,0 +1,96 @@
+<%= simple_form_for ([@school, @school.reviews.build]) do |f|%>
+	<div id= "rating-form">
+		<label>Quality</label>
+	</div>
+	<div id= "rating-academics">
+		<label>Academics</label>
+	</div>
+	
+	<div id= "rating-assistance">
+		<label>Professor Assistance</label>
+	</div>
+	
+	<div id= "rating-life">
+		<label>Student Life</label>
+	</div>
+	
+	<div id= "rating-campus">
+		<label>Campus</label>
+	</div>
+	
+	<div id= "rating-return">
+		<label>Return on Investment</label>
+	</div>
+	
+	<div id= "rating-delay">
+		<label>Delay on Graduation (per semester)</label>
+	</div>
+	
+	<div id= "rating-career">
+		<label>Career Opportunity</label>
+	</div>
+	
+
+	<%= f.input :comment %>
+	<%= f.button :submit %>
+
+<% end %>
+
+<script>
+	$('#rating-campus').raty({
+		
+		path: '/assets/',
+		scoreName: 'review[campus]'
+	});
+</script>
+<script>
+	$('#rating-return').raty({
+		
+		path: '/assets/',
+		scoreName: 'review[return]'
+	});
+</script>
+<script>
+	$('#rating-delay').raty({
+		
+		path: '/assets/',
+		scoreName: 'review[delay]'
+	});
+</script>
+<script>
+	$('#rating-career').raty({
+		
+		path: '/assets/',
+		scoreName: 'review[career]'
+	});
+</script>
+
+<script>
+	$('#rating-form').raty({
+		
+		path: '/assets/',
+		scoreName: 'review[rating]'
+	});
+</script>
+<script>
+	$('#rating-academics').raty({
+		
+		path: '/assets/',
+		scoreName: 'review[academics]'
+	});
+</script>
+<script>
+	$('#rating-assistance').raty({
+		
+		path: '/assets/',
+		scoreName: 'review[assistance]'
+	});
+</script>
+
+<script>
+	$('#rating-life').raty({
+		
+		path: '/assets/',
+		scoreName: 'review[life]'
+	});
+</script>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 1
+  academics: 1
+  assistance: 1
+  life: 1
+  comment: MyText
+
+two:
+  rating: 1
+  academics: 1
+  assistance: 1
+  life: 1
+  comment: MyText

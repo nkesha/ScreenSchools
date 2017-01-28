@@ -1,0 +1,47 @@
+
+<div class = "row">
+		<div class = "col three">	
+
+				<div><label>Academics</label><span class ="review" data-score = <%= review.academics %>></span></div>
+				<div><label>Assistance</label><span class ="review" data-score = <%= review.assistance %>></span></div>
+				<div><label>Social</label><span class ="review" data-score = <%= review.life %>></span></div>
+				<div><label>Career</label><span class ="review" data-score= <%= review.career%>></span></div>	
+		</div>
+
+		<div class = "col three">
+			<div><label>Quality</label><span class ="review" data-score = <%= review.rating %>></span></div>
+			<div><label>Return on Investment</label><span class ="review" data-score = <%= review.return %>></span></div>
+			<div><label>Delay Graduation</label><span class ="review" data-score = <%= review.delay %>></span></div>
+			<div><label>Campus</label><span class ="review" data-score = <%= review.campus%>></span></div>
+			
+		</div>
+
+		<div class = "col six">
+			<p class ="comment_text"><label>Comment: </label><%= review.comment %></p>
+
+			<% if user_signed_in? %>
+				<% if review.user_id == current_user.id %>
+
+					<div class = "links btn-group">
+						<%= link_to "Edit", edit_school_review_path(review.school, review ), class:"btn btn-custom" %>
+						<%= link_to "Delete", school_review_path(review.school, review), method: :delete, data:  {confirm: "Are you sure?"}, class:"btn btn-custom" %>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+</div>
+
+
+	<script>
+		$('.review').raty({
+			readOnly: true,
+			path: '/assets/',
+		score: function() {
+			return $(this).attr('data-score');
+		},
+		
+	});
+
+	</script>
+
+
