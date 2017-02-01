@@ -37,7 +37,33 @@ body {
 	font-family: 'Lora', serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+nav ul
+{
+	text-align: center;
+}
+
+@media screen and (max-width: 768px){
+	nav ul {
+		max-height: 80px;
+		text-align: center;
+	}
+	nav ul li {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 5px;
+		
+	}
+}
+
+
+span
+{
+	float: right;
+	overflow: auto;
+}
+
+
+h1,h2,h3, h4, h5, h6 {
 	font-family: 'Lora', serif;
 	font-weight: 300;
 }
@@ -46,19 +72,20 @@ p.alert, p.notice {
 	margin: 0;
 }
 
-
 /* Navbar/navigation styles */
 
 .navbar {
 	font-family: 'Lora', serif;
 	text-transform: uppercase;
+	
 }
 .navbar-default {
 	background-color: #fff;
-	padding-bottom: 5px;
-	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-top: 2px;
 
 	.navbar-nav > li > a {
+		text-align: center;
 		color: #222;
 		&:hover {
 			color: darken(#f1c40f, 5%);
@@ -70,6 +97,7 @@ p.alert, p.notice {
 
 		.navbar-brand {
 			color: #222;
+			text-align: center;
 			letter-spacing: 1.4px;
 		}
 
@@ -114,19 +142,46 @@ p.alert, p.notice {
 	}
 }
 
-.btn-custom2 {
-	color: #333;
-	background-color: #fff;
-	border: 1px solid #222;
-	padding: 8px 20px;
+.btn-custom1
+{
+
+	color: #fff;
+	background-color: darken(#f1c40f, 5%);
+	border: 1px solid darken(#f1c40f, 5%);
+	text-decoration: none;
 	border-radius: 5px;
+	padding: 8px 3px;
+	margin-top: 2px;
+	margin-bottom: 1px;
+
 	font-family: 'Lora', serif;
 	&:hover {
 		text-decoration: none;
-		background-color: #333;
+		background-color: #fff;
+		color: darken(#f1c40f, 5%);
+		transition: 0.5s;
+	}
+	
+}
+
+.btn-custom3 {
+	color: #fff;
+	background-color: darken(#f1c40f, 5%);
+	border: 1px solid darken(#f1c40f, 5%);
+	text-decoration: none;
+	border-radius: 50%;
+	padding: 4px 10px;
+	margin-top: 1px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+
+	font-family: 'Lora', serif;
+	&:hover {
+		text-decoration: none;
+		background-color: darken(#f1c40f, 5%);
 		color: #fff;
 		transition: 0.5s;
-	}	
+	}
 }
 
 .links {
@@ -317,6 +372,11 @@ p.alert, p.notice {
 
 }
 
+.lefty
+{
+	margin-right: 0px;
+}
+
 .body-review {
 	width: 100%;
 	min-width: 320px;
@@ -329,6 +389,7 @@ p.alert, p.notice {
 	width: 100%;
 	min-height: 10px;
 	float: left;
+	overflow: auto;
 }
 .col {
 	background: #fff;
@@ -355,7 +416,7 @@ p.alert, p.notice {
 	overflow: auto;
 }
 
-.p {margin : 0;}
+
 
 .comment_text {
 	margin: 0;
@@ -384,6 +445,3 @@ p.alert, p.notice {
 	padding: 5px;	
 }
 
-.label {
-	font-family: 'Lora', serif;
-}

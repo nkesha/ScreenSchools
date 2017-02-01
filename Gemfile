@@ -16,6 +16,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'coffee-script-source', '1.8.0'
 gem 'devise', '~> 4.2'
 
+gem 'searchkick', '~> 2.1', '>= 2.1.1'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'

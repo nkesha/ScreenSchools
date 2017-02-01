@@ -1,7 +1,15 @@
 class SchoolsController < ApplicationController
 	before_action :find_school, only: [:show, :edit, :update, :destroy]
+	#here we are making sure that the user cannot access certain pages without authentification.
 	before_action :authenticate_user!, only: [:new, :edit]
 
+	def search
+		if params[:search].present?
+			@schools = School.search(params[:search])
+		else
+			@schools = School.all.order ("created_at DESC")
+		end
+	end
 
 	def index
 		@schools = School.all.order ("created_at DESC")

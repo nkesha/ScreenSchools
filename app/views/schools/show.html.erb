@@ -1,25 +1,27 @@
 
 	<h2 class ="center"><%= @school.title %></h2>
+	<h5 class ="center"><em>Based on <%= @school.reviews.count %> reviews </em></h5>
+
 	<div class = "row">
 
 		<div class = "col six">
-			<div class = "average-review-rating" data-score= <%=@average_rating%> ><label>Overal quality</label></div>
-			<div class = "average-review-academics" data-score= <%=@average_academics%> ><label>Academics</label></div>
-			<div class = "average-review-assistance" data-score= <%=@average_assistance%> ><label>Assistance</label></div>
-			<div class = "average-review-return" data-score= <%=@average_return%> ><label>Return on Investment</label></div>
+			<div><label>Overall quality</label><span class ="average" data-score = <%=@average_rating%>></span></div>
+			<div><label>Academics</label><span class ="average" data-score = <%=@average_academics%>></span></div>
+			<div><label>Assistance</label><span class ="average" data-score = <%=@average_assistance%>></span></div>
+			<div><label>Return on Investment</label><span class ="average" data-score = <%=@average_return%>></span></div>
 		</div>
 
 		<div class = "col six">
-			<div class = "average-review-life" data-score= <%=@average_life%> ><label>Student Life</label></div>
-			<div class = "average-review-campus" data-score= <%=@average_campus%> ><label>Campus</label></div>
-			<div class = "average-review-delay" data-score= <%=@average_delay%> ><label>Delay Graduation (per semester)</label></div>
-			<div class = "average-review-career" data-score= <%=@average_career%> ><label>Career After Graduation</label></div>
+			<div><label>Student Life</label><span class ="average" data-score = <%=@average_life%>></span></div>
+			<div><label>Campus</label><span class ="average" data-score = <%=@average_campus%>></span></div>
+			<div><label>Delay Graduation (per semester)</label><span class ="average" data-score = <%=@average_delay%>></span></div>
+			<div><label>Career After Graduation</label><span class ="average" data-score = <%=@average_career%>></span></div>
 		</div>
 
 	</div>
 
 
-<h2 class = "center">Reviews</h2>
+<h2 class = "center">Reviews <em>(out of 5)</em> </h2>
 
 <div class = "center">
 	<% if user_signed_in? %>
@@ -48,7 +50,7 @@
 
 
 <script>
-	$('.average-review-rating').raty({
+	$('.average').raty({
 		readOnly: true,
 		path: '/assets/',
 		score: function() {
@@ -57,77 +59,3 @@
 		
 	});
 </script>
-
-<script>
-	$('.average-review-academics').raty({
-		readOnly: true,
-		path: '/assets/',
-		score: function() {
-			return $(this).attr('data-score');
-		},
-		
-	});
-</script>
-<script>
-	$('.average-review-assistance').raty({
-		readOnly: true,
-		path: '/assets/',
-		score: function() {
-			return $(this).attr('data-score');
-		},
-		
-	});
-</script>
-
-<script>
-	$('.average-review-life').raty({
-		readOnly: true,
-		path: '/assets/',
-		score: function() {
-			return $(this).attr('data-score');
-		},
-		
-	});
-</script>
-<script>
-	$('.average-review-campus').raty({
-		readOnly: true,
-		path: '/assets/',
-		score: function() {
-			return $(this).attr('data-score');
-		},
-		
-	});
-</script>
-<script>
-	$('.average-review-return').raty({
-		readOnly: true,
-		path: '/assets/',
-		score: function() {
-			return $(this).attr('data-score');
-		},
-		
-	});
-</script>
-<script>
-	$('.average-review-delay').raty({
-		readOnly: true,
-		path: '/assets/',
-		score: function() {
-			return $(this).attr('data-score');
-		},
-		
-	});
-</script>
-<script>
-	$('.average-review-career').raty({
-		readOnly: true,
-		path: '/assets/',
-		score: function() {
-			return $(this).attr('data-score');
-		},
-		
-	});
-</script>
-
-

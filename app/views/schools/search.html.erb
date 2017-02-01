@@ -1,9 +1,8 @@
-
 <div class = "row">
 	<% @schools.each do |school| %>
 		<div class = "col-md-12">
 			<div class = "struct">
-				<h3><%= link_to school.title, school_path(school)  %></h3>
+				<h2><%= link_to school.title, school_path(school)  %></h2>
 				<p style = "text-indent: 30px">Location: <%= school.location %></p>
 			</div>
 		</div>
