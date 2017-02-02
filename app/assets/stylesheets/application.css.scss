@@ -42,9 +42,21 @@ nav ul
 	text-align: center;
 }
 
+.header 
+{
+	font-family: 'Lora', serif;
+	color : #222;
+	font-weight: 50;
+	letter-spacing: 1.4px;
+	text-transform: uppercase;
+	text-align: center;
+	margin : 2px;
+}
+
+
 @media screen and (max-width: 768px){
 	nav ul {
-		max-height: 80px;
+		max-height: 40px;
 		text-align: center;
 	}
 	nav ul li {
@@ -187,7 +199,7 @@ p.alert, p.notice {
 .links {
 
 	.btn-custom {
-		padding: 3px 10px;
+		padding: 3px 5px;
 		font-weight: 300;
 	}
 
@@ -206,7 +218,7 @@ p.alert, p.notice {
 /* Book styles */
 
 .book {
-	height: 350px;
+	height: 200px;
 	width: 250px;
 	margin-bottom: 20px;
 	@include background-tile;
@@ -217,51 +229,9 @@ p.alert, p.notice {
 	background-color: #fff;
 	font-family: 'Lora', serif;
 	padding: 3px 3px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	@include background-tile;
 }
-
-.book-show {
-	height: 475px;
-	width: 325px;
-	@include background-tile;
-}
-
-.book-info {
-	@include background-tile;
-
-	.book-title {
-		margin-top: 0;
-		font-size: 2em;
-	}
-
-	.avg-rating {
-		font-size: 1.5em;
-		margin-top: 15px;
-		margin-bottom: 5px;
-	}
-
-	.number-of-reviews {
-		font-size: 0.85em;
-		font-style: italic;
-	}
-
-	.book-desc {
-		font-size: 1.05em;
-		line-height: 1.5;
-		margin-bottom: 15px;
-		margin-top: 15px;
-	}
-
-}
-
-
-/* current-category styles */
-
-.current-category {
-	margin-bottom: 40px;
-}
-
 
 /* Reviews styles */
 
@@ -295,44 +265,6 @@ p.alert, p.notice {
 }
 
 /* New Book Form styles */
-
-.new-book-form {
-	@include background-tile;
-
-	h1 {
-		margin-top: 0;
-	}
-
-	#category_id {
-		margin-bottom: 10px;
-	}
-
-	#book_book_img {
-		margin-bottom: 10px;
-	}
-
-}
-
-
-/* Edit Book Form styles */
-
-.edit-book-form {
-
-	@include background-tile;
-
-	h1 {
-		margin-top: 0;
-	}
-
-	#book_category_id {
-		margin-bottom: 10px;
-	}
-
-	#book_book_img {
-		margin-bottom: 10px;
-	}
-
-}
 
 /* New/Edit review form styles */
 
@@ -377,15 +309,8 @@ p.alert, p.notice {
 	margin-right: 0px;
 }
 
-.body-review {
-	width: 100%;
-	min-width: 320px;
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
 .row{
-	padding: 10px;
+	padding: 5px;
 	width: 100%;
 	min-height: 10px;
 	float: left;

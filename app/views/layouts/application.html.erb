@@ -12,7 +12,7 @@
 
     <nav class="navbar navbar-default navbar-static-top" >
         <ul class="nav navbar-nav topnav">
-            <li><%= link_to "Screen Review", root_path%></li>
+            <li><%= link_to "Show All", root_path%></li>
         </ul>
 
         <ul class="nav navbar-nav topnav" id= "myTopnav">
@@ -28,7 +28,7 @@
 
         <ul class="nav navbar-nav navbar">
               <% if user_signed_in? %> 
-                  <li><%= link_to "Add School", new_school_path %></li>
+                 <!-- <li><%= link_to "Add School", new_school_path %></li> -->
               <% end %>
         </ul>
 
