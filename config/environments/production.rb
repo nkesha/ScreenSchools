@@ -82,5 +82,20 @@ Rails.application.configure do
   end
 
   # Do not dump schema after migrations.
+
+
+
+  #-------added for send Grid--------------------
+
+  
+
+
+
+  #------------------------------------------------
+
+
+
+
+
   config.active_record.dump_schema_after_migration = false
 end
